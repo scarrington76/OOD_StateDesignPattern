@@ -1,5 +1,7 @@
 package CarIgnitionSystem;
 
+// Interface for the methods for each state
+
 public interface State {
  
 	public void insertKey();

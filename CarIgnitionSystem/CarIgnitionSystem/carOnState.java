@@ -1,5 +1,7 @@
 package CarIgnitionSystem;
 
+// Descriptions of State when car is on and running (key has been inserted and engine has been cranked)
+
 public class carOnState implements State {
     CarIgnition carignition;
  
@@ -12,13 +14,14 @@ public class carOnState implements State {
 	}
  
 	public void noKeyMessage() {
-		System.out.println("The car is already on");
+		System.out.println("The car is already in process of turning on");
 	}
  
 	public void crankEngine() {
 		System.out.println("Do not attempt to turn the car on twice");
 	}
  
+	// Car is using power/battery. If the car cannot use power message sent to user
 	public void usePower() {
 		carignition.batteryloss();
 		if (carignition.getCharge() > 0) {

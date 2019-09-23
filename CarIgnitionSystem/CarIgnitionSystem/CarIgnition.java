@@ -1,5 +1,7 @@
 package CarIgnitionSystem;
 
+// Establish CarIgnition class with methods and states
+
 public class CarIgnition {
  
 	State batteryDeadState;
@@ -16,7 +18,7 @@ public class CarIgnition {
 		hasKeyState = new hasKeyState(this);
 		carOnState = new carOnState(this);
 
-		this.charge = batteryLife;
+		this.charge = batteryLife; //If the car has battery, then wait for key into ignition
  		if (batteryLife > 0) {
 			state = noKeyState;
 		} 
@@ -39,6 +41,7 @@ public class CarIgnition {
 		this.state = state;
 	}
  
+	// Deplete the battery when car runs
 	void batteryloss() {
 		System.out.print("You are driving on the open road!.....");
 		if (charge != 0) {
@@ -51,6 +54,7 @@ public class CarIgnition {
 		return charge;
 	}
  
+	// Refill the battery and advise user of new range for car
 	void refillBattery(int charge) {
 		this.charge += charge;
 		System.out.println("The battery was just recharged; it's new range is: " + this.charge + " miles.");
@@ -77,6 +81,7 @@ public class CarIgnition {
         return carOnState;
     }
  
+    // String telling user what is happening in each state/change
 	public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("\nTesla Model S");

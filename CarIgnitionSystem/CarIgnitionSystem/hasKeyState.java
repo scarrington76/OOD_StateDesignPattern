@@ -1,5 +1,8 @@
 package CarIgnitionSystem;
 
+// Description of state when the key has been put into the ignition. Car not yet running
+
+
 public class hasKeyState implements State {
 	
 	CarIgnition carignition;
@@ -13,7 +16,7 @@ public class hasKeyState implements State {
 	}
  
 	public void noKeyMessage() {
-		System.out.println("The Key Is Not In The Ignition. Please Insert Key....");
+		System.out.println("The Key is in the ignition");
 		carignition.setState(carignition.getNoKeyState());
 	}
  
