@@ -46,7 +46,7 @@ public class CarIgnition {
 		System.out.print("You are driving on the open road!.....");
 		if (charge != 0) {
 			charge = charge - 1;
-			System.out.println(charge + " range is now left in the battery...");
+			System.out.println(charge + " mile(s) are now left in the battery...");
 		}
 	}
  
@@ -85,7 +85,7 @@ public class CarIgnition {
 	public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("\nTesla Model S");
-		result.append("\nRange left on battery: " + charge + " miles");
+		result.append("\nRange left on battery: " + charge + " mile");
 		if (charge != 1) {
 			result.append("s");
 		}
