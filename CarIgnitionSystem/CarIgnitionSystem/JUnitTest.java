@@ -19,13 +19,14 @@ class JUnitTest {
 			System.out.println(carignition);
 			
 			carignition.insertKey();
-			carignition.crankEngine();
+			carignition.insertKey();
+			carignition.batteryloss();
 			carignition.insertKey();
 			carignition.crankEngine();
 
 			System.out.println(carignition);
 
-			carignition.insertKey();
+			carignition.crankEngine();
 			carignition.crankEngine();
 			carignition.insertKey();
 			carignition.crankEngine();
